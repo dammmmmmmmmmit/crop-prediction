@@ -23,15 +23,15 @@ ph = st.number_input("pH", min_value=0.0, max_value=14.0, value=6.5)
 rainfall = st.number_input("Rainfall (mm)", min_value=0.0, max_value=400.0, value=100.0)
 
 
-with open(r"C:\Users\user\Desktop\pyprac\logistic\project1\modelsave.pkl",'rb') as f:
+with open(r"C:\Users\user\Desktop\pyprac\logistic\project1\crop-prediction\modelsave.pkl",'rb') as f:
     model = pickle.load(f)
     
 
-with open(r"C:\Users\user\Desktop\pyprac\logistic\project1\standarscaler.pkl",'rb') as f:
+with open(r"C:\Users\user\Desktop\pyprac\logistic\project1\crop-prediction\standarscaler.pkl",'rb') as f:
     sc = pickle.load(f)
     
 
-with open(r"C:\Users\user\Desktop\pyprac\logistic\project1\LabelEncoder.pkl",'rb') as f:
+with open(r"C:\Users\user\Desktop\pyprac\logistic\project1\crop-prediction\LabelEncoder.pkl",'rb') as f:
     le = pickle.load(f)
 
 df = pd.DataFrame({"N":[N],"P":[P],"K":[K],"temperature":[K],"humidity":[humidity],"ph":[ph],"rainfall":[rainfall]})
